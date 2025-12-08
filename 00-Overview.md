@@ -2,9 +2,9 @@
 ### Human–Centered Security Layer for LLM Applications
 
 ## 1. Purpose of This Framework
-Large Language Models introduce a class of risks that do not arise solely from the model or the system architecture. Many failures originate in *human–AI interaction*, where predictable cognitive patterns amplify technical vulnerabilities.
+Large Language Models introduce a class of risks that do not arise solely from the model or the system architecture. Many failures originate in *human-AI interaction*, where predictable cognitive patterns amplify technical vulnerabilities.
 
-This companion framework defines a Human–Centered Security Layer that complements the **OWASP Top 10 for LLM Applications**. It formalizes two foundational cognitive vulnerabilities:
+This companion framework defines a Human-Centered Security Layer that complements the **OWASP Top 10 for LLM Applications**. It formalizes two foundational cognitive vulnerabilities:
 
 - **CV-01 Automation Bias Exploitation**
 - **CV-02 Confirmation Bias Exploitation**
@@ -36,7 +36,7 @@ Instead, it extends it by:
 - identifying cognitive risks that amplify technical vulnerabilities,  
 - defining detection signals for LLM-driven cognitive drift,  
 - providing mitigation strategies across all system layers,  
-- formalizing a vocabulary for human–AI failure modes.  
+- formalizing a vocabulary for human-AI failure modes.  
 
 The initial scope includes CV-01 and CV-02.  
 Further vulnerabilities will be developed collaboratively by the OWASP community.
