@@ -5,4 +5,4 @@ This file describes the three-layer architecture:
 - Interface-Level Bias Countermeasures
 - Human-Level Safeguards
 
-Replace with the detailed architecture section from the conversation.
+
