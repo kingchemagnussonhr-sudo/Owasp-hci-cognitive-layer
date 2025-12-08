@@ -6,4 +6,4 @@
 | CV-02 Confirmation Bias | Low Narrative Entropy | Forced Disagreement Sampling |
 | CV-01 Automation Bias   | Low Token-to-Claim Ratio | Information Density Barometer + Latency-Compensated Generation |
 
-You can expand this matrix later as more CV entries are defined via community work.
+Expand this matrix later as more CV entries are defined via community work.
