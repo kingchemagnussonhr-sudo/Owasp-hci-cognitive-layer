@@ -1,47 +1,63 @@
 # OWASP Cognitive Vulnerability Companion Framework
-### Human Centered Security Layer for LLM Applications
+### Human–Centered Security Layer for LLM Applications
 
-Modern LLM systems do not fail only at the model or infrastructure level.  
-They also fail in the **human-AI interaction layer**, where predictable cognitive patterns amplify technical vulnerabilities.
+## 1. Purpose of This Framework
+Large Language Models introduce a class of risks that do not arise solely from the model or the system architecture. Many failures originate in *human–AI interaction*, where predictable cognitive patterns amplify technical vulnerabilities.
 
-This repository defines a **Cognitive Vulnerability Companion Framework** to the **OWASP Top 10 for LLM Applications**, with a focus on:
+This companion framework defines a Human–Centered Security Layer that complements the **OWASP Top 10 for LLM Applications**. It formalizes two foundational cognitive vulnerabilities:
 
-- **CV-01 Automation Bias Exploitation**  
-- **CV-02 Confirmation Bias Exploitation**  
-- A **three-layer Human-Centered Security Architecture**:
-  - Model level cognitive integrity  
-  - Interface level bias countermeasures  
-  - Human level safeguards  
+- **CV-01 Automation Bias Exploitation**
+- **CV-02 Confirmation Bias Exploitation**
 
-The goal is to provide a structured, OWASP aligned way to talk about and mitigate cognitive risks in LLM deployments.
+These vulnerabilities explain why users may overtrust, misinterpret, or misapply LLM outputs, even when technical controls are in place.
 
----
+## 2. Why Cognitive Vulnerabilities Matter
+LLM failures often occur not because the model is malicious, but because:
 
-## Repository structure
+- users assume expertise ("the AI probably knows"),  
+- users accept outputs too quickly,  
+- users align emotionally with the model’s tone,  
+- UI design encourages frictionless acceptance,  
+- cognitive overload reduces critical evaluation.
 
-- `00-Overview.md`  
-  High level introduction to the framework and its purpose.
+Cognitive vulnerabilities sit at the intersection of:
 
-- `01-Core-Concepts.md`  
-  Core concepts: cognitive vulnerabilities, human-AI interaction risks, and the three layer HCI model.
+- psychology,  
+- HCI and UX design,  
+- security engineering,  
+- AI behaviour under uncertainty.
 
-- `02-CV01-Automation-Bias.md`  
-  Formal definition, detection signals and mitigations for CV-01 Automation Bias Exploitation.
+This framework introduces structured controls that strengthen security across **model**, **interface**, and **human** layers.
 
-- `03-CV02-Confirmation-Bias.md`  
-  Formal definition, detection signals and mitigations for CV-02 Confirmation Bias Exploitation.
+## 3. Scope of the Companion Framework
+This framework does *not* replace the OWASP LLM Top 10.  
+Instead, it extends it by:
 
-- `04-HCI-Architecture.md`  
-  The Human Centered Security Architecture: Model / Interface / Human layers and how they interact.
+- identifying cognitive risks that amplify technical vulnerabilities,  
+- defining detection signals for LLM-driven cognitive drift,  
+- providing mitigation strategies across all system layers,  
+- formalizing a vocabulary for human–AI failure modes.  
 
-- `05-Detection-Matrix.md`  
-  Detection & mitigation matrix linking signals (e.g. affective congruence, low narrative entropy) to concrete controls.
+The initial scope includes CV-01 and CV-02.  
+Further vulnerabilities will be developed collaboratively by the OWASP community.
 
-- `06-Failure-Modes.md`  
-  Why single layer interventions (only model, only UI, only training) are structurally insufficient.
+## 4. Intended Audience
+This framework is designed for:
 
-- `07-Future-Bias-Expansion.md`  
-  Community led roadmap for developing additional Cognitive Vulnerabilities (CV-03–CV-10).
+- security architects  
+- LLM developers  
+- AI safety researchers  
+- UX/HCI designers  
+- risk managers  
+- organizations deploying AI into workflows  
 
-- `08-Contribution-Guide.md`  
-  How to propose new CV entries, su
+## 5. Alignment With OWASP Principles
+The project follows OWASP values:
+
+- **Open participation**  
+- **Transparency**  
+- **Community governance**  
+- **Evidence-based iteration**
+
+This document is part of an ongoing collaborative process to strengthen LLM security by incorporating the human cognitive layer into risk modeling.
+
