@@ -1,38 +1,32 @@
-# Future Cognitive Vulnerabilities (Community-Led Expansion)
+# Future Cognitive Vulnerabilities (Community-Led Development)
 
-# Cognitive Vulnerability Incident Template
+This framework defines CV-01 and CV-02 as foundational entries.  
+However, the cognitive attack surface is significantly broader.
 
-## Incident Overview
-- Date: [YYYY-MM or "Estimated Q2 2024"]
-- Domain: [Healthcare/Finance/Legal/Customer Service/etc.]
-- LLM System: [GPT-4/Claude/Internal Model/Unknown]
-- Anonymization: [Company removed/Roles generalized/etc.]
+Rather than defining additional vulnerabilities unilaterally, this project adopts a **community-driven expansion model**, consistent with OWASP principles.
 
-## Suspected Cognitive Vulnerability
-- [ ] CV-01 Automation Bias
-- [ ] CV-02 Confirmation Bias  
-- [ ] Other (describe):
+## 1. Why Community Expansion?
+- Cognitive vulnerabilities overlap psychology, HCI, security, and AI ethics.  
+- Real-world patterns emerge only through deployment and testing.  
+- A collaborative approach ensures accuracy and legitimacy.
 
-## What Happened
-[Narrative description - what did the user do? What did the AI do?]
+## 2. Scope for Future Entries
+Future CV-entries may include:
+- anchoring drift,  
+- social proof illusions,  
+- friction avoidance,  
+- dependency bias,  
+- semantic overconfidence.
 
-## Why Cognitive Vulnerability Matters Here
-[How did human cognition contribute to the incident?]
+But these will **not** be defined in this version.
 
-## Technical Factors
-[Were there also technical vulnerabilities? Which OWASP LLM Top-10 entries?]
+## 3. Invitation to Contribute
+Researchers, practitioners, and organizations are invited to submit:
 
-## Outcome
-- Severity: [Critical/High/Medium/Low]
-- Impact: [Financial/Reputational/Safety/Privacy/etc.]
-- Detection: [Caught before harm/Caught after/Never detected]
+- proposed cognitive vulnerabilities,  
+- anonymized incident patterns,  
+- detection signals,  
+- mitigation strategies,  
+- mappings to OWASP LLM Top-10.
 
-## What Might Have Prevented This
-[Proposed mitigations - can be speculative]
-
-## Evidence Type
-- [ ] First-hand observation
-- [ ] Reported by colleague
-- [ ] Reconstructed from incident report
-- [ ] Hypothetical scenario based on real patterns
-
+The goal is to collaboratively build a **Cognitive Vulnerabilities Top 10**.
