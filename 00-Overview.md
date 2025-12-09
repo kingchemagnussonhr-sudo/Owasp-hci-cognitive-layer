@@ -1,585 +1,226 @@
-# OWASP Cognitive Vulnerability Companion Framework
-### A Research Framework for Human–Centered Security in LLM Applications
+# 00-Overview: Cognitive Vulnerability Companion Framework  
+### Version 1.0 – Deep Overview
 
 ---
 
-## What This Framework Is
+## 1. Purpose and Scope
 
-This is a **community-driven research framework** for discovering, documenting, and validating cognitive vulnerabilities in human–AI interaction.
+This document provides the conceptual and architectural foundation of the OWASP Cognitive Vulnerability Companion Framework.  
+While the README introduces the project at a high level, this Overview offers a deeper exposition of:
 
-**We provide:**
-- Structured vocabulary for discussing cognitive risks in LLM systems
-- Hypothesis-driven methodology for testing mitigations
-- Templates for reporting incidents and sharing findings
-- A collaborative space for building evidence-based security practices
+- The theoretical basis for cognitive vulnerabilities  
+- The multi-layer mitigation architecture  
+- The research methodology used throughout the framework  
+- The role of community evidence  
+- The pathway toward future expansion and standardization  
 
-**We do NOT yet provide:**
-- Validated compliance requirements
-- Proven mitigation effectiveness data
-- Implementation mandates
-- Deployment-ready security controls
-
-Those emerge through community contribution and empirical validation.
+This is a **research framework**, not a deployment standard.
 
 ---
 
-## Purpose of This Framework
+## 2. Why Cognitive Vulnerabilities Matter
 
-Large Language Models introduce risks that do not arise solely from technical vulnerabilities. Many failures originate in **human-AI interaction**, where predictable cognitive patterns amplify technical flaws.
+LLM-based systems introduce failure modes that arise from the *interaction* between technical behavior and human cognition.
 
-This framework establishes a research structure to:
+Many incidents occur when:
 
-1. **Identify** cognitive vulnerabilities that increase security risk
-2. **Document** real-world incidents where cognition contributed to failure
-3. **Propose** detection signals and mitigation strategies
-4. **Test** these strategies in real deployments
-5. **Validate** what actually works through shared evidence
+- A technical flaw **becomes harmful** because a human misinterprets it  
+- A human bias **amplifies** a model error  
+- A user overtrusts a fluent but incorrect output  
+- A decision is made under time pressure or cognitive overload  
 
----
-
-##  Current Status: Version 1.0 (Research Phase)
-
-###  What's Established
-
-- **Core Concepts:** Foundational theory of cognitive vulnerabilities in LLM security
-- **Initial Vulnerabilities:** CV-01 (Automation Bias) and CV-02 (Confirmation Bias) as starting hypotheses
-- **Three-Layer Architecture:** Model–Interface–Human security framework
-- **Contribution Templates:** Structured formats for sharing incidents and findings
-
-###  What's Being Discovered
-
-- Real-world incident patterns that validate or refute CV-01 and CV-02
-- Detection signal effectiveness (which signals actually predict problems?)
-- Mitigation strategy outcomes (what works? what fails? what's the cost?)
-- Additional cognitive vulnerabilities beyond the initial two
-
-###  What's Coming
-
-- Evidence-based refinement of proposed controls
-- Industry-specific guidance based on deployment data
-- Validated risk severity classifications
-- Potential integration into OWASP official guidance (pending validation)
+Traditional security models rarely address these mechanisms.  
+This framework fills that gap by defining cognitive vulnerabilities as a systematic layer of analysis.
 
 ---
 
-##  Why This Framework Needs You
+## 3. Definition: Cognitive Vulnerability
 
-**This framework is intentionally incomplete.**
+A **cognitive vulnerability** is a predictable, repeatable cognitive pattern that:
 
-We've built the structure, but the content comes from community experience:
+1. Amplifies the effect of a technical vulnerability  
+2. Degrades human oversight or judgment  
+3. Distorts interpretation of AI outputs  
+4. Creates new failure pathways unique to human–AI interaction  
 
-### **We Need From You:**
-
-** Incident Reports**  
-Have you seen users overtrust AI outputs? Accept biased responses? Share anonymized cases.
-
-** Pilot Data**  
-Testing mitigations in your organization? Share what worked and what didn't.
-
-** New Vulnerabilities**  
-Observed cognitive failure patterns not covered by CV-01 or CV-02? Propose them.
-
-** Implementation Experience**  
-Built detection systems? Tried adding UI friction? Tell us the real-world outcomes.
-
-** Research Findings**  
-Academic studies, user testing, A/B results - all evidence strengthens the framework.
+Cognitive vulnerabilities are treated analogously to software vulnerabilities:  
+they are **observable**, **classifiable**, and **testable**.
 
 ---
 
-##  Who This Framework Serves
+## 4. Initial Vulnerabilities: CV-01 and CV-02
 
-### **For Security Architects**
-A structured approach to discussing human factors in LLM risk models.
+### CV-01: Automation Bias Exploitation  
+Users overtrust automated systems—especially when under cognitive load, facing time pressure, or receiving fluent, confident outputs.
 
-### **For ML Engineers**  
-Specific detection signals to monitor in production systems.
+### CV-02: Confirmation Bias Exploitation  
+Users selectively accept outputs that align with their beliefs, emotional tone, or expectations.  
+LLMs can unintentionally reinforce this by mirroring user framing.
 
-### **For UX/HCI Designers**  
-Evidence-based guidance on where friction helps vs. harms.
-
-### **For AI Safety Researchers**  
-Collaborative dataset of cognitive failure modes in deployed systems.
-
-### **For Risk Managers**  
-Framework for assessing human-AI interaction risks alongside technical vulnerabilities.
-
-### **For Organizations**  
-Early warning system for emerging cognitive risks before they cause incidents.
+These serve as the starting hypotheses for the framework.
 
 ---
 
-##  Framework Maturity Roadmap
+## 5. Three-Layer Cognitive Security Architecture
 
-### **# OWASP Cognitive Vulnerability Companion Framework
-### A Research Framework for Human–Centered Security in LLM Applications
-
----
-
-##  What This Framework Is
-
-This is a **community-driven research framework** for discovering, documenting, and validating cognitive vulnerabilities in human–AI interaction.
-
-**We provide:**
-- Structured vocabulary for discussing cognitive risks in LLM systems
-- Hypothesis-driven methodology for testing mitigations
-- Templates for reporting incidents and sharing findings
-- A collaborative space for building evidence-based security practices
-
-**We do NOT yet provide:**
-- Validated compliance requirements
-- Proven mitigation effectiveness data
-- Implementation mandates
-- Deployment-ready security controls
-
-Those emerge through community contribution and empirical validation.
+The framework proposes a layered approach to mitigating cognitive vulnerabilities.
 
 ---
 
-##  Purpose of This Framework
+### Layer 1 — Model-Level Mitigations  
+Focus: Inference behavior and uncertainty expression.
 
-Large Language Models introduce risks that do not arise solely from technical vulnerabilities. Many failures originate in **human–AI interaction**, where predictable cognitive patterns amplify technical flaws.
+Examples:  
+- Epistemic Calibration Layer  
+- Forced Disagreement Sampling  
+- Latency-Compensated Generation  
+- Confidence signaling  
 
-This framework establishes a research structure to:
-
-1. **Identify** cognitive vulnerabilities that increase security risk
-2. **Document** real-world incidents where cognition contributed to failure
-3. **Propose** detection signals and mitigation strategies
-4. **Test** these strategies in real deployments
-5. **Validate** what actually works through shared evidence
-
----
-
-##  Current Status: Version 1.0 (Research Phase)
-
-###  What's Established
-
-- **Core Concepts:** Foundational theory of cognitive vulnerabilities in LLM security
-- **Initial Vulnerabilities:** CV-01 (Automation Bias) and CV-02 (Confirmation Bias) as starting hypotheses
-- **Three-Layer Architecture:** Model–Interface–Human security framework
-- **Contribution Templates:** Structured formats for sharing incidents and findings
-
-###  What's Being Discovered
-
-- Real-world incident patterns that validate or refute CV-01 and CV-02
-- Detection signal effectiveness (which signals actually predict problems?)
-- Mitigation strategy outcomes (what works? what fails? what's the cost?)
-- Additional cognitive vulnerabilities beyond the initial two
-
-###  What's Coming
-
-- Evidence-based refinement of proposed controls
-- Industry-specific guidance based on deployment data
-- Validated risk severity classifications
-- Potential integration into OWASP official guidance (pending validation)
+Goal: Reduce output characteristics that trigger cognitive failure modes.
 
 ---
 
-##  Why This Framework Needs You
+### Layer 2 — Interface/UX Mitigations  
+Focus: How users perceive and interpret AI outputs.
 
-**This framework is intentionally incomplete.**
+Examples:  
+- Bias Warning System  
+- Information Density Barometer  
+- Verification friction  
+- Counterfactual surfacing  
 
-We've built the structure, but the content comes from community experience:
-
-### **We Need From You:**
-
-** Incident Reports**  
-Have you seen users overtrust AI outputs? Accept biased responses? Share anonymized cases.
-
-** Pilot Data**  
-Testing mitigations in your organization? Share what worked and what didn't.
-
-** New Vulnerabilities**  
-Observed cognitive failure patterns not covered by CV-01 or CV-02? Propose them.
-
-** Implementation Experience**  
-Built detection systems? Tried adding UI friction? Tell us the real-world outcomes.
-
-** Research Findings**  
-Academic studies, user testing, A/B results - all evidence strengthens the framework.
+Goal: Make critical cognitive cues visible and actionable.
 
 ---
 
-##  Who This Framework Serves
+### Layer 3 — Human & Organizational Mitigations  
+Focus: Training, workflows, and decision protocols.
 
-### **For Security Architects**
-A structured approach to discussing human factors in LLM risk models.
+Examples:  
+- Metacognitive Resilience Training  
+- Structured review and verification procedures  
+- Policies for high-risk domains  
 
-### **For ML Engineers**  
-Specific detection signals to monitor in production systems.
-
-### **For UX/HCI Designers**  
-Evidence-based guidance on where friction helps vs. harms.
-
-### **For AI Safety Researchers**  
-Collaborative dataset of cognitive failure modes in deployed systems.
-
-### **For Risk Managers**  
-Framework for assessing human-AI interaction risks alongside technical vulnerabilities.
-
-### **For Organizations**  
-Early warning system for emerging cognitive risks before they cause incidents.
+Goal: Strengthen human decision-making where technical controls cannot compensate.
 
 ---
 
-##  Framework Maturity Roadmap
+## 6. Research Methodology
 
-### ** Stage 1: Foundation (Current)**
-- Core concepts defined
-- Initial vulnerabilities proposed
-- Community contribution infrastructure established
-- Call for participation launched
+The framework uses a hypothesis-testing model:
 
-### ** Stage 2: Evidence Gathering (Months 1-6)**
-**Goals:**
-- 15+ validated incident reports across different domains
-- 5+ organizations pilot-testing mitigations
-- Initial effectiveness data on detection signals
-- Community consensus on CV-01 and CV-02 validity
+1. **Propose Vulnerability**  
+   Define and describe a cognitive failure pattern.
 
-**Success Criteria:**
-- Evidence shows cognitive vulnerabilities cause measurable harm
-- At least 3 mitigations show positive outcomes in real deployments
+2. **Observe Incidents**  
+   Collect real-world incident reports using templates.
 
-### ** Stage 3: Refinement (Months 6-12)**
-**Goals:**
-- Risk severity classifications based on incident data
-- Domain-specific guidance (healthcare, finance, legal, etc.)
-- Cost-benefit analysis of proposed mitigations
-- Identification of CV-03, CV-04, etc. through community proposals
+3. **Identify Detection Signals**  
+   Map measurable indicators that correlate with the vulnerability.
 
-**Success Criteria:**
-- Framework contains only empirically-supported content
-- Clear implementation guidance based on real-world testing
+4. **Propose Mitigations**  
+   Generate candidate mitigations across the three layers.
 
-### ** Stage 4: Standardization (Months 12-24)**
-**Goals:**
-- Sufficient evidence for OWASP official consideration
-- Industry adoption of validated practices
-- Potential integration with LLM Top 10
-- Certification or audit protocols
+5. **Pilot Testing**  
+   Organizations run trials and collect outcome data.
 
-**Success Criteria:**
-- Framework cited in security standards and regulations
-- Measurable reduction in cognitive-vulnerability-related incidents
+6. **Evidence Accumulation**  
+   Classify results as: Hypothesis / Early Evidence / Validated / Refuted.
+
+7. **Iterative Refinement**  
+   Integrate validated findings; remove unsupported claims.
 
 ---
 
-##  Relationship to OWASP LLM Top 10
+## 7. Detection & Mitigation Matrix (Conceptual)
 
-This framework **complements** the OWASP Top 10 for LLM Applications by addressing the cognitive layer that determines whether technical vulnerabilities result in actual harm.
+| Vulnerability | Detection Signals | Proposed Mitigations |
+|---------------|------------------|-----------------------|
+| CV-01 Automation Bias | Low token-to-claim ratio, authoritative tone, high fluency, time pressure | Epistemic Calibration Layer, Information Density Barometer |
+| CV-02 Confirmation Bias | Affective congruence, low narrative entropy, user-framed prompts | Forced Disagreement Sampling, Bias Warning System |
 
-### **How They Connect:**
-
-| OWASP LLM Top 10 | Cognitive Amplification |
-|------------------|-------------------------|
-| **LLM01: Prompt Injection** | Users may not recognize injected content due to automation bias |
-| **LLM02: Insecure Output Handling** | Confirmation bias causes users to accept flawed outputs |
-| **LLM08: Excessive Agency** | Automation bias leads to insufficient oversight of AI actions |
-| **LLM09: Overreliance** | Direct manifestation of cognitive vulnerabilities |
-
-**Key Principle:** Technical controls often fail at the human interface. Cognitive vulnerabilities explain *why*.
+The matrix will expand as additional vulnerabilities emerge.
 
 ---
 
-##  What's Included in Version 1.0
+## 8. Failure of One-Sided Approaches
 
-### **Foundational Documents:**
+### Human-only mitigation  
+Training users not to overtrust AI eventually collapses under cognitive overload.
 
-1. **Core Concepts** — Why cognitive vulnerabilities matter for LLM security
-2. **CV-01: Automation Bias Exploitation** — First proposed vulnerability
-3. **CV-02: Confirmation Bias Exploitation** — Second proposed vulnerability
-4. **Three-Layer Security Architecture** — Model–Interface–Human mitigation framework
-5. **Detection & Mitigation Matrix** — Proposed signals and responses (hypothesis stage)
-6. **Failure Modes Analysis** — Why single-layer controls are insufficient
-7. **Community Expansion Model** — How we grow beyond CV-01 and CV-02
-8. **Contribution Guide** — How to participate
+### Technical-only mitigation  
+Well-calibrated models cannot protect against users who ignore or misinterpret signals.
 
-### **Research Infrastructure:**
+### UX-only mitigation  
+Warnings without underlying model support become noise.
 
-- Incident report templates
-- Mitigation testing templates
-- New vulnerability proposal format
-- Evidence submission guidelines
+A coordinated three-layer approach is required.
 
 ---
 
-##  Getting Started
+## 9. Relationship to OWASP LLM Top 10
 
-### **I Want To Contribute Incidents**
-→ Read CV-01 and CV-02 → Use Incident Template → Submit via GitHub Issues
+Cognitive vulnerabilities explain how technical risks escalate into real harm.
 
-### **I Want To Test Mitigations**
-→ Review Three-Layer Architecture → Use Pilot Testing Template → Share results
+Examples:
 
-### **I Want To Propose CV-03**
-→ Read Contribution Guide → Use New Vulnerability Template → Open discussion
+- **LLM01 Prompt Injection**: amplified by automation bias  
+- **LLM02 Insecure Output Handling**: shaped by confirmation bias  
+- **LLM08 Excessive Agency**: strengthened by user overreliance  
+- **LLM09 Overreliance**: a direct cognitive vulnerability  
 
-### **I'm Just Learning**
-→ Read Core Concepts → Watch repository → Join community discussions
-
----
-
-##  Principles Guiding This Framework
-
-### **1. Evidence Over Assertion**
-We propose hypotheses. Community provides evidence. Only validated content survives.
-
-### **2. Transparency About Uncertainty**
-Every proposed mitigation carries a status label: Hypothesis / Early Evidence / Validated / Refuted
-
-### **3. Collaborative Discovery**
-No single organization has all the answers. Security emerges through shared learning.
-
-### **4. Practical Focus**
-Academic rigor meets deployment reality. If it doesn't work in production, it doesn't belong here.
-
-### **5. Cognitive Humility**
-We're exploring complex human–AI interaction. Expect surprises, welcome refutation, update beliefs.
+This framework complements OWASP LLM Top 10 by modeling the human interaction layer.
 
 ---
 
-##  How To Participate
+## 10. Path Toward Standardization
 
-### **Contribute:**
-- GitHub: [Repository link]
-- Discussions: [Forum link]
-- Email: [Contact email]
+For the framework to progress beyond research:
 
-### **Stay Updated:**
-- Star the repository
-- Join monthly community calls
-- Subscribe to research updates
+- Community participation must increase  
+- Empirical evidence must accumulate  
+- Vulnerabilities must show generalizability  
+- Mitigations must demonstrate measurable effectiveness  
 
-### **Collaborate:**
-- Propose new vulnerabilities
-- Share pilot test results
-- Review community submissions
-- Co-author framework evolution
+Only then can components be considered for OWASP standardization.
 
 ---
 
-##  License & Governance
+## 11. Future Expansion: CV-03, CV-04, …
 
-This framework follows OWASP principles:
-- **Open participation** — Anyone can contribute
-- **Transparent governance** — Community review determines inclusion
-- **Evidence-based** — Claims require supporting data
-- **Collaborative evolution** — Framework grows through collective intelligence
+Candidate cognitive vulnerabilities (not yet included):
 
----
+- Anchoring bias  
+- Framing effects  
+- Cognitive overload cycles  
+- Illusion of explanatory depth  
+- Trust asymmetry  
+- Emotional congruence distortions  
 
-##  The Vision
-
-**A future where LLM security considers the human cognitive layer as rigorously as it considers technical architecture.**
-
-Where:
-- Incidents are analyzed for cognitive contributing factors
-- Mitigations are tested against human behavioral reality
-- Security frameworks reflect how people actually interact with AI
-- Organizations deploy AI systems that respect cognitive limitations
-
-**This framework is the first step. Your contribution is the next.**
+Future versions will be driven by evidence-based proposals.
 
 ---
 
-##  Citation
+## 12. How to Contribute
 
-If you reference this framework in research or implementation:
+Contribution areas include:
 
-```
-OWASP Cognitive Vulnerability Companion Framework (Version 1.0 - Research Phase)
-Community-Driven Research Framework for Human-Centered LLM Security
-[Year]. Available at: [URL]
-```
+- Incident reports  
+- Mitigation pilot results  
+- New vulnerability proposals  
+- UX and HCI experiments  
+- Cross-domain analysis  
+- Evidence reviews  
 
----
-
-** Important Disclaimer:**
-
-This framework is in active research phase. Proposed mitigations have not yet been validated through rigorous empirical testing. Organizations should:
-- Pilot test any proposed controls in their specific context
-- Measure actual effectiveness before broad deployment
-- Share findings back to the community
-- Maintain existing security practices while exploring cognitive layers
-
-**Do not treat this as compliance-ready guidance. Treat it as a research collaboration invitation.** Stage 1: Foundation (Current)**
-- Core concepts defined
-- Initial vulnerabilities proposed
-- Community contribution infrastructure established
-- Call for participation launched
-
-### ** Stage 2: Evidence Gathering (Months 1-6)**
-**Goals:**
-- 15+ validated incident reports across different domains
-- 5+ organizations pilot-testing mitigations
-- Initial effectiveness data on detection signals
-- Community consensus on CV-01 and CV-02 validity
-
-**Success Criteria:**
-- Evidence shows cognitive vulnerabilities cause measurable harm
-- At least 3 mitigations show positive outcomes in real deployments
-
-### ** Stage 3: Refinement (Months 6-12)**
-**Goals:**
-- Risk severity classifications based on incident data
-- Domain-specific guidance (healthcare, finance, legal, etc.)
-- Cost-benefit analysis of proposed mitigations
-- Identification of CV-03, CV-04, etc. through community proposals
-
-**Success Criteria:**
-- Framework contains only empirically-supported content
-- Clear implementation guidance based on real-world testing
-
-### ** Stage 4: Standardization (Months 12-24)**
-**Goals:**
-- Sufficient evidence for OWASP official consideration
-- Industry adoption of validated practices
-- Potential integration with LLM Top 10
-- Certification or audit protocols
-
-**Success Criteria:**
-- Framework cited in security standards and regulations
-- Measurable reduction in cognitive-vulnerability-related incidents
+Templates are provided in `/templates/`.
 
 ---
 
-##  Relationship to OWASP LLM Top 10
+## 13. Conclusion
 
-This framework **complements** the OWASP Top 10 for LLM Applications by addressing the cognitive layer that determines whether technical vulnerabilities result in actual harm.
+Cognitive vulnerabilities represent an emerging class of risks in LLM systems.  
+This framework establishes the foundations for a new discipline: **cognitive security**.
 
-### **How They Connect:**
+Version 1.0 defines the structure.  
+The community will determine the content.
 
-| OWASP LLM Top 10 | Cognitive Amplification |
-|------------------|-------------------------|
-| **LLM01: Prompt Injection** | Users may not recognize injected content due to automation bias |
-| **LLM02: Insecure Output Handling** | Confirmation bias causes users to accept flawed outputs |
-| **LLM08: Excessive Agency** | Automation bias leads to insufficient oversight of AI actions |
-| **LLM09: Overreliance** | Direct manifestation of cognitive vulnerabilities |
-
-**Key Principle:** Technical controls often fail at the human interface. Cognitive vulnerabilities explain *why*.
-
----
-
-##  What's Included in Version 1.0
-
-### **Foundational Documents:**
-
-1. **Core Concepts** — Why cognitive vulnerabilities matter for LLM security
-2. **CV-01: Automation Bias Exploitation** — First proposed vulnerability
-3. **CV-02: Confirmation Bias Exploitation** — Second proposed vulnerability
-4. **Three-Layer Security Architecture** — Model–Interface–Human mitigation framework
-5. **Detection & Mitigation Matrix** — Proposed signals and responses (hypothesis stage)
-6. **Failure Modes Analysis** — Why single-layer controls are insufficient
-7. **Community Expansion Model** — How we grow beyond CV-01 and CV-02
-8. **Contribution Guide** — How to participate
-
-### **Research Infrastructure:**
-
-- Incident report templates
-- Mitigation testing templates
-- New vulnerability proposal format
-- Evidence submission guidelines
-
----
-
-##  Getting Started
-
-### **I Want To Contribute Incidents**
-→ Read CV-01 and CV-02 → Use Incident Template → Submit via GitHub Issues
-
-### **I Want To Test Mitigations**
-→ Review Three-Layer Architecture → Use Pilot Testing Template → Share results
-
-### **I Want To Propose CV-03**
-→ Read Contribution Guide → Use New Vulnerability Template → Open discussion
-
-### **I'm Just Learning**
-→ Read Core Concepts → Watch repository → Join community discussions
-
----
-
-##  Principles Guiding This Framework
-
-### **1. Evidence Over Assertion**
-We propose hypotheses. Community provides evidence. Only validated content survives.
-
-### **2. Transparency About Uncertainty**
-Every proposed mitigation carries a status label: Hypothesis / Early Evidence / Validated / Refuted
-
-### **3. Collaborative Discovery**
-No single organization has all the answers. Security emerges through shared learning.
-
-### **4. Practical Focus**
-Academic rigor meets deployment reality. If it doesn't work in production, it doesn't belong here.
-
-### **5. Cognitive Humility**
-We're exploring complex human–AI interaction. Expect surprises, welcome refutation, update beliefs.
-
----
-
-##  How To Participate
-
-### **Contribute:**
-- GitHub: [Repository link]
-- Discussions: [Forum link]
-- Email: [Contact email]
-
-### **Stay Updated:**
-- Star the repository
-- Join monthly community calls
-- Subscribe to research updates
-
-### **Collaborate:**
-- Propose new vulnerabilities
-- Share pilot test results
-- Review community submissions
-- Co-author framework evolution
-
----
-
-##  License & Governance
-
-This framework follows OWASP principles:
-- **Open participation** — Anyone can contribute
-- **Transparent governance** — Community review determines inclusion
-- **Evidence-based** — Claims require supporting data
-- **Collaborative evolution** — Framework grows through collective intelligence
-
----
-
-##  The Vision
-
-**A future where LLM security considers the human cognitive layer as rigorously as it considers technical architecture.**
-
-Where:
-- Incidents are analyzed for cognitive contributing factors
-- Mitigations are tested against human behavioral reality
-- Security frameworks reflect how people actually interact with AI
-- Organizations deploy AI systems that respect cognitive limitations
-
-**This framework is the first step. Your contribution is the next.**
-
----
-
-##  Citation
-
-If you reference this framework in research or implementation:
-
-```
-OWASP Cognitive Vulnerability Companion Framework (Version 1.0 - Research Phase)
-Community-Driven Research Framework for Human-Centered LLM Security
-[Year]. Available at: [URL]
-```
-
----
-
-** Important Disclaimer:**
-
-This framework is in active research phase. Proposed mitigations have not yet been validated through rigorous empirical testing. Organizations should:
-- Pilot test any proposed controls in their specific context
-- Measure actual effectiveness before broad deployment
-- Share findings back to the community
-- Maintain existing security practices while exploring cognitive layers
-
-**Do not treat this as compliance-ready guidance. Treat it as a research collaboration invitation.**
