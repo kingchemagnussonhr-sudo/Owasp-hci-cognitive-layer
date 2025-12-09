@@ -3,7 +3,7 @@
 
 ---
 
-## 🚧 Important Positioning: This Is a Research Framework, Not a Deployment Standard
+##  Important Positioning: This Is a Research Framework, Not a Deployment Standard
 
 This project is an **open research framework** for understanding, structuring, and validating **cognitive vulnerabilities** that arise in human–AI interaction, especially in systems using LLMs.
 
@@ -11,13 +11,13 @@ It provides conceptual foundations and methodological tools, **not deployment-re
 
 ### Version 1.0 establishes:
 
-#### ✅ Vocabulary and Taxonomy  
+####  Vocabulary and Taxonomy  
 A structured language for describing cognitive vulnerabilities (e.g., CV-01, CV-02).
 
-#### ✅ Hypothesis-Driven Research Structure  
+####  Hypothesis-Driven Research Structure  
 A scientific workflow for discovery, incident analysis, community review, and evidence-based refinement.
 
-#### ✅ Templates for Reporting and Testing  
+####  Templates for Reporting and Testing  
 Standardized formats for:  
 - Cognitive vulnerability incident reports  
 - Mitigation pilot studies  
@@ -27,20 +27,20 @@ Standardized formats for:
 
 ### Version 1.0 does NOT provide:
 
-#### ❌ Validated Mitigation Effectiveness Data  
+####  Validated Mitigation Effectiveness Data  
 All proposed mitigation strategies remain hypotheses until real-world testing confirms their reliability.
 
-#### ❌ Implementation Requirements  
+####  Implementation Requirements  
 This framework does not prescribe how organizations *must* implement cognitive safety controls.
 
-#### ❌ Compliance Checklists  
+####  Compliance Checklists  
 No part of this version is intended as a regulatory or audit standard.
 
 **These elements will emerge through community contribution and empirical validation.**
 
 ---
 
-## 📘 Purpose of the Framework
+##  Purpose of the Framework
 
 Modern LLM systems introduce risks that originate not only from technical flaws but also from predictable **cognitive patterns** on the human side of the interaction:
 
@@ -65,7 +65,7 @@ The long-term goal is to support safe, reliable, and cognitively sustainable AI 
 
 ---
 
-## 🧠 What’s Included in Version 1.0
+##  What’s Included in Version 1.0
 
 ### Foundational Documents
 - Core Concepts  
@@ -86,7 +86,7 @@ This structure enables systematic observation, testing, refutation, and refineme
 
 ---
 
-## 🔗 Relationship to OWASP LLM Top 10
+##  Relationship to OWASP LLM Top 10
 
 This framework complements technical analysis by describing **how human cognition can amplify or fail to detect technical risks**, such as:
 
@@ -101,7 +101,7 @@ Evaluating technical and cognitive layers together provides a more complete risk
 
 ---
 
-## 🧩 Framework Status
+##  Framework Status
 
 ### Research Phase (Version 1.0)
 This version defines foundational concepts but requires **community evidence** to evolve.
@@ -117,7 +117,7 @@ Nothing becomes “standard” until supported by real-world data.
 
 ---
 
-## 🤝 How to Contribute
+##  How to Contribute
 
 We invite practitioners, researchers, and organizations to participate through:
 
@@ -131,7 +131,7 @@ See **CONTRIBUTING.md** and templates in `/templates/`.
 
 ---
 
-## 📜 License & Governance
+##  License & Governance
 
 This project follows OWASP principles:
 - Open participation  
@@ -141,7 +141,7 @@ This project follows OWASP principles:
 
 ---
 
-## 📚 Citation
+##  Citation
 
 If referencing this framework:
 
