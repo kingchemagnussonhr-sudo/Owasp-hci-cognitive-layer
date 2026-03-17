@@ -38,6 +38,16 @@ No part of this version is intended as a regulatory or audit standard.
 
 **These elements will emerge through community contribution and empirical validation.**
 
+## Who This Framework Is For
+
+| Role | How to use this framework |
+|------|--------------------------|
+| AI Governance & Compliance | Use Detection Matrix for risk assessment |
+| Security Architects | Integrate cognitive controls into AI system design |
+| UX / Product teams | Apply Interface-Level controls from CV entries |
+| Researchers | Contribute new CVs, incident reports, and empirical data |
+| Auditors | Reference EU AI Act Article 14 alignment section |
+
 ---
 
 ##  Purpose of the Framework
