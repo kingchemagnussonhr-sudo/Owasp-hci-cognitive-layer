@@ -44,8 +44,6 @@ Raghavan, M., Barocas, S., Kleinberg, J., & Levy, K. (2020).
 Mitigating Bias in Algorithmic Hiring.
 DOI: 10.1145/3351095.3372828
 
----
-
 ## Case 2: Predictive policing systems
 
 Predictive policing models trained on historical crime data can reinforce analysts’ expectations about high-risk areas, creating feedback loops.
@@ -58,8 +56,6 @@ Reference
 Lum, K., & Isaac, W. (2016).
 To predict and serve?
 DOI: 10.1111/1745-9133.12194
-
----
 
 ## Case 3: AI legal research assistants
 
