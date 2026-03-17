@@ -116,4 +116,3 @@ URL: [url]
 
 ---
 
-Strukturen är medvetet enkel. Varje block har samma format så att du kan lägga till nya utan att behöva tänka på layouten. "Finding relevant to CV-XX" är den viktigaste raden — den är bryggan mellan studien och ditt ramverk, och den tvingar dig att vara explicit om varför just den studien hör hemma här.
