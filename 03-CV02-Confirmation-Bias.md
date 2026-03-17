@@ -26,11 +26,10 @@ The system can detect confirmation drift using:
 - **Semantic Narrowing**  
   Outputs fall into repetitive patterns aligned with user expectations.
 
-  # Real-World Incidents: Confirmation Bias
+
+## 2.1   # Real-World Incidents: Confirmation Bias
 
 Confirmation Bias occurs when users selectively accept AI outputs that reinforce existing beliefs or expectations.
-
-## ## 2.1 
 
 Case 1: AI-assisted recruitment
 
