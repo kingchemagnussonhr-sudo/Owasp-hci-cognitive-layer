@@ -12,23 +12,28 @@ contradicts or qualifies it.
 - Decision outcome correlates with order of information, not quality
 
 
-2.1 Documented Real-World Incidents
+Legal — anchoring bias in LLM-based legal decision-making
 
-Case 1: Legal: contract interpretation
-Ankarbias i LLM-baserat juridiskt beslutsfattande
-Den starkaste källan är en studie publicerad i Artificial Intelligence and Law (Springer, januari 2026). Forskarna replikerade Teichman et al. (2023) på sju avancerade LLM:er, däribland GPT-4o och Claude Sonnet, och fann att modellerna systematiskt visade ankarbiasrekommenderade signifikant längre straff när de exponerades för irrelevanta numeriska ankare. Springer Det som är extra relevant för ditt CV-03-scenario: kunskapsförstärkning förvärrade faktiskt ankarbiasen — mer juridisk information i prompten ökade snarare än minskade effekten. Springer Det betyder att en jurist som litar på en välkalibrerad, vältränad modell kan vara mer utsatt, inte mindre.
-Den klassiska mänskliga grunden för detta är Englich, Mussweiler & Strack (2006) — "Playing dice with criminal sentences" — som visade att erfarna domare ankrade domslut på slumpmässiga tärningskast. Denna studie citeras direkt i LLM-studien ovan och ger den mänskliga baslinje som CV-03 bygger på.
+The strongest source is a study published in Artificial Intelligence and Law (Springer, January 2026). The researchers replicated Teichman et al. (2023) across seven advanced LLMs, including GPT-4o and Claude Sonnet, and found that the models systematically exhibited anchoring bias recommending significantly longer sentences when exposed to irrelevant numerical anchors.Particularly relevant for your CV-03 scenario: knowledge enhancement actually worsened the anchoring bias more legal information in the prompt increased rather than decreased the effect.This means a lawyer relying on a well-calibrated, well-trained model may be more exposed, not less.
 
+The classical human baseline for this is Englich, Mussweiler & Strack (2006) "Playing dice with criminal sentences" which showed that experienced judges anchored verdicts to random dice rolls. This study is cited directly in the LLM study above and provides the human baseline that CV-03 builds on.
 
+Finance, anchoring bias in LLM investment analysis
 
-Case 2: AI-assisted medical diagnosis (2023 meta-analysis)
+A strong empirical source here is a ScienceDirect study (2024): researchers tested whether ChatGPT exhibits anchoring bias in financial forecasts, including extreme anchors such as an S&P 500 value of 59,175 and found that LLM responses are sensitive to biased hints, consistent with prior findings on humans in equity market forecasts, cryptocurrency, and credit card decisions.
+ScienceDirect
 
-Clinicians using AI diagnostic support accepted incorrect diagnoses at significantly higher rates when AI confidence scores were displayed as percentages rather than ranges. CV-01 pattern: High-confidence output suppresses independent evaluation. Source: Goddard et al., NPJ Digital Medicine, 2023.
+An even sharper source for the exact scenario of an analyst failing to revise their assessment is "Your AI, Not Your View" (ACM Conference on AI in Finance, 2025): models exhibited a strong confirmation bias when confronted with counter-evidence, regardless of volume and intensity, they stubbornly refused to revise their judgments, adhering to evidence that confirmed their internal knowledge while disregarding counter-evidence.
 
+This is CV-03 described at the model level 
+But since the analyst receives and iterates with the model, this maps directly onto human behaviour. The methodologically most robust study on LLM anchoring bias generally is now "Anchoring Bias in Large Language Models: An Experimental Study" published in the Journal of Computational Social Science (Springer, December 2025): strong models consistently demonstrated vulnerability to the anchoring effect. They were highly susceptible to "expert" opinions presented in the prompt, and this behaviour could not be corrected even when the model was explicitly instructed to ignore them. Neither Chain-of-Thought, Thoughts of Principles, nor Reflection strategies were sufficient to reduce anchoring bias.
+Springer
 
-Case 3: Finans — ankarbias i LLM-investeringsanalys
-Här finns en stark empirisk källa från ScienceDirect (2024): En studie testade om ChatGPT uppvisar ankarbias i finansiella prognoser, inklusive extrema ankare som ett S&P 500-värde på 59 175 — och fann att LLM-svar är känsliga för biasade ledtrådar, i linje med tidigare fynd på människor inom aktiemarknadsprognoser, kryptovaluta och kreditbeslut. ScienceDirect
-En ännu skarpare källa för det exakta scenariot med analytikern som inte reviderar sin bedömning är studien "Your AI, Not Your View" (ACM Conference on AI in Finance, 2025): Modeller uppvisade en tydlig konfirmationsbias — när de konfronterades med motbevis, oavsett volym och styrka, vägrade de envist att revidera sina bedömningar, och höll fast vid bevis som bekräftade deras interna kunskaper medan de ignorerade motbevis. arXiv Detta är CV-03 beskriven på modellnivå — men eftersom analytikern tar emot och itererar med modellen, speglas detta direkt i det mänskliga beteendet.
+Clinical — anchoring and automation bias in diagnostics
+
+The most directly citable study is Jabbour et al., JAMA, December 2023 — "Automation Bias and Assistive AI: Risk of Harm From AI-Driven Clinical Decision Support" (PMID 38112814). It is a clinical trial published in JAMA, giving it high authority. It focuses explicitly on how AI-driven clinical decision support creates automation bias and is widely cited in subsequent literature. A complementary RCT from Communications Medicine (Nature, 2025) offers a more nuanced picture: 50 US-licensed physicians reviewed standardised chest pain vignettes and answered clinical questions before and after receiving GPT-4 recommendations — physicians were willing to modify their clinical decisions based on AI assistance, leading to improved accuracy scores.
+Nature
+This is an important counterbalance: the study shows the CV-01 pattern of uncritical acceptance is not inevitable, but it confirms that the behaviour is strong enough to produce measurable effects on clinical decisions.
 
 
 ## 3. Exploitation Scenarios
