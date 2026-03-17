@@ -26,6 +26,51 @@ The system can detect confirmation drift using:
 - **Semantic Narrowing**  
   Outputs fall into repetitive patterns aligned with user expectations.
 
+  # Real-World Incidents: Confirmation Bias
+
+Confirmation Bias occurs when users selectively accept AI outputs that reinforce existing beliefs or expectations.
+
+## Case 1: AI-assisted recruitment
+
+AI screening systems may reinforce hiring managers’ expectations when algorithmic recommendations align with prior beliefs about candidate profiles.
+
+Impact
+• biased hiring outcomes
+• reduced diversity in candidate pools
+
+Reference
+Raghavan, M., Barocas, S., Kleinberg, J., & Levy, K. (2020).
+Mitigating Bias in Algorithmic Hiring.
+DOI: 10.1145/3351095.3372828
+
+---
+
+## Case 2: Predictive policing systems
+
+Predictive policing models trained on historical crime data can reinforce analysts’ expectations about high-risk areas, creating feedback loops.
+
+Impact
+• reinforcement of historical bias
+• skewed policing strategies
+
+Reference
+Lum, K., & Isaac, W. (2016).
+To predict and serve?
+DOI: 10.1111/1745-9133.12194
+
+---
+
+## Case 3: AI legal research assistants
+
+Lawyers using AI legal assistants have submitted hallucinated case law that supported their argument without verifying the citations.
+
+Impact
+• fabricated legal citations
+• professional sanctions
+
+Reference
+Mata v. Avianca Inc., No. 22-cv-1461 (S.D.N.Y. 2023)
+
 ## 3. Exploitation Scenarios
 Confirmation Bias can cause:
 
