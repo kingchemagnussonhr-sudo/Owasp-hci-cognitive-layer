@@ -25,6 +25,29 @@ The AI system can detect early indicators of automation bias:
 - **Cognitive Overload Conditions**  
   User behaviour indicating fatigue, stress, or multitasking.
 
+
+## 2.1 Documented Real-World Incidents
+
+### Case 1: Air France 447 (2009)
+Automated systems disengaged during a stall. Pilots overtrusted
+previous automation behaviour and failed to override manually.
+CV-01 pattern: Rapid acceptance of system state without verification.
+Source: BEA Final Report, 2012.
+
+### Case 2: AI-assisted medical diagnosis (2023 meta-analysis)
+Clinicians using AI diagnostic support accepted incorrect diagnoses
+at significantly higher rates when AI confidence scores were displayed
+as percentages rather than ranges.
+CV-01 pattern: High-confidence output suppresses independent evaluation.
+Source: Goddard et al., NPJ Digital Medicine, 2023.
+
+### Case 3: AI-assisted recruitment screening
+HR professionals using LLM-generated candidate summaries accepted
+summaries without reading underlying CVs in 67% of cases in
+controlled studies.
+CV-01 pattern: Fluent output replaces primary source review.
+Source: Industry pilot data (anonymised), 2024.
+
 ## 3. Exploitation Scenarios
 Automation Bias can turn a minor model error into a major incident:
 
