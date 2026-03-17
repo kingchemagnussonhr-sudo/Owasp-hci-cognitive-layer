@@ -27,7 +27,7 @@ The system can detect confirmation drift using:
   Outputs fall into repetitive patterns aligned with user expectations.
 
 
-## 2.1   # Real-World Incidents: Confirmation Bias
+## 2.1 Real-World Incidents: Confirmation Bias
 
 Confirmation Bias occurs when users selectively accept AI outputs that reinforce existing beliefs or expectations.
 
