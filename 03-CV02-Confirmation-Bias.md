@@ -30,7 +30,9 @@ The system can detect confirmation drift using:
 
 Confirmation Bias occurs when users selectively accept AI outputs that reinforce existing beliefs or expectations.
 
-## Case 1: AI-assisted recruitment
+## ## 2.1 
+
+Case 1: AI-assisted recruitment
 
 AI screening systems may reinforce hiring managers’ expectations when algorithmic recommendations align with prior beliefs about candidate profiles.
 
