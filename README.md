@@ -10,11 +10,10 @@ When a doctor accepts an AI diagnosis without questioning it.
 When a security analyst misses an anomaly because the AI said everything was fine.  
 When a junior developer ships AI-generated code without review.
 
-These are not user errors. They are predictable cognitive vulnerabilities —  
-and no security framework addresses them systematically. Until now.
+These are not user errors. They are predictable cognitive vulnerabilities, and no security framework addresses them systematically. Until now.
 
-This framework provides vocabulary, structure, and research tools  
-for the cognitive layer of LLM security.
+This framework provides vocabulary, structure, and research tools for the cognitive layer of LLM security.
+
 ##  Important Positioning: This Is a Research Framework, Not a Deployment Standard
 
 This project is an **open research framework** for understanding, structuring, and validating **cognitive vulnerabilities** that arise in human–AI interaction, especially in systems using LLMs.
