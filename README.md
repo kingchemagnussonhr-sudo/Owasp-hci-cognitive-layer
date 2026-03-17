@@ -42,6 +42,27 @@ No part of this version is intended as a regulatory or audit standard.
 
 ##  Purpose of the Framework
 
+## Regulatory Relevance
+
+**EU AI Act — Article 14: Human Oversight**
+Article 14 requires that high-risk AI systems enable human operators
+to oversee, understand, and intervene in AI outputs.
+
+Cognitive vulnerabilities are the primary mechanism through which
+human oversight fails in practice:
+
+- Automation Bias (CV-01) causes operators to accept outputs
+  without sufficient scrutiny
+- Confirmation Bias (CV-02) causes operators to miss errors
+  that contradict their expectations
+
+This framework provides the cognitive layer that Article 14
+compliance requires but does not specify.
+
+**ISO/IEC 42001 — AI Management Systems**
+Section 6.1 (Risk assessment) and 8.4 (Human oversight) directly
+benefit from the detection and mitigation patterns in this framework.
+
 Modern LLM systems introduce risks that originate not only from technical flaws but also from predictable **cognitive patterns** on the human side of the interaction:
 
 - Automation bias  
