@@ -12,6 +12,8 @@ contradicts or qualifies it.
 - Decision outcome correlates with order of information, not quality
 
 
+2.1 Documented Real-World Incidents
+
 Legal — anchoring bias in LLM-based legal decision-making
 
 The strongest source is a study published in Artificial Intelligence and Law (Springer, January 2026). The researchers replicated Teichman et al. (2023) across seven advanced LLMs, including GPT-4o and Claude Sonnet, and found that the models systematically exhibited anchoring bias recommending significantly longer sentences when exposed to irrelevant numerical anchors.Particularly relevant for your CV-03 scenario: knowledge enhancement actually worsened the anchoring bias more legal information in the prompt increased rather than decreased the effect.This means a lawyer relying on a well-calibrated, well-trained model may be more exposed, not less.
