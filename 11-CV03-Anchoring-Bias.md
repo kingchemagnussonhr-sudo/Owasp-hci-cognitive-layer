@@ -11,6 +11,15 @@ contradicts or qualifies it.
 - Query sequence shows no reformulation after new evidence presented
 - Decision outcome correlates with order of information, not quality
 
+
+Legal: contract interpretation
+Professional anchors on first AI interpretation of ambiguous contract clause and fails to seek alternative readings, even when a second query returns a conflicting view.
+Finance: valuation estimates
+Analyst anchors on initial LLM valuation figure; subsequent sensitivity analysis is subconsciously bounded by that anchor rather than conducted independently.
+Clinical: differential diagnosis
+Clinician anchors on first AI-suggested differential and orders tests that confirm rather than challenge it, narrowing diagnostic search space prematurely.
+
+
 ## 3. Exploitation Scenarios
 - Legal professional anchors on first contract interpretation
 - Financial analyst anchors on initial LLM valuation estimate
