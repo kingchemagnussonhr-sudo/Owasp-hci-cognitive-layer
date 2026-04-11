@@ -1,23 +1,27 @@
-# CV-00: The Adaptive Loop as Primary Threat Vector
-
+# CV-00: The Adaptive Loop
+### Primary Interaction-Level Risk-Generating Mechanism
 *OWASP HCI Cognitive Layer*
 
 | | |
 |---|---|
 | Document ID | CV-00 |
-| Status | Draft |
-| Version | 1.0 |
+| Status | Draft v2.0 |
+| Version | 2.0 |
 | Domain | Interaction Dynamics |
-| Threat level | Foundational |
+| Classification | Risk-generating mechanism (not a vulnerability entry) |
 | See also | README: Scope and Positioning; CV-01 through CV-07 |
+
+---
+
+> **Epistemological status note:** CV-00 should be read as a security-oriented synthesis of several convergent mechanisms, not as a fully validated unified construct. The component mechanisms are empirically supported; the loop as a single measurable risk class is a theoretical integration with partial but not yet direct longitudinal validation.
 
 ---
 
 ## 1. Purpose
 
-This document defines the adaptive loop as the primary threat vector in the OWASP HCI Cognitive Layer framework. It is not a vulnerability catalogue entry in the same sense as CV-01 through CV-07. It describes the structural mechanism that produces the vulnerabilities those documents address.
+This document defines the adaptive loop as the primary interaction-level risk-generating mechanism in the OWASP HCI Cognitive Layer framework. It is not a vulnerability catalogue entry in the same sense as CV-01 through CV-07. It describes the structural dynamic that produces and amplifies the vulnerabilities those documents address.
 
-CV-01 through CV-07 describe what happens to a user's cognition. CV-00 describes why it happens, and why standard epistemic defences are insufficient to prevent it.
+CV-01 through CV-07 describe what happens to a user's cognition under sustained AI interaction. CV-00 describes the mechanism through which it happens, and why standard epistemic defences are under-scoped to prevent it.
 
 See README: Scope and Positioning for the framework's broader positioning within established cognitive security traditions.
 
@@ -25,113 +29,171 @@ See README: Scope and Positioning for the framework's broader positioning within
 
 ## 2. Definition
 
-The adaptive loop is a self-reinforcing dynamic that emerges from sustained, continuous interaction between a user and an AI system. It is characterised by three properties:
+The adaptive loop is a self-reinforcing dynamic that emerges from sustained, repeated interaction between a user and an AI system. It is characterised by three co-occurring properties.
 
-**Mutual adaptation.** The system adjusts its outputs based on the user's inputs; the user adjusts their framing based on the system's outputs. Neither party announces this. No single exchange is decisive.
+### Mutual adaptation
 
-**Cumulative reference frame shift.** Over time the shared context narrows. The space of questions that feel worth asking contracts. The space of outputs that feel self-evidently correct expands. This occurs without the user internalising a new belief or narrative.
+The system adjusts its outputs based on the user's inputs; the user adjusts their framing, vocabulary, and query structure based on the system's outputs. Neither party announces this. No single exchange is decisive. This is grounded in established HCI and sociolinguistic research on lexical entrainment (Brennan, 1996) and Communication Accommodation Theory (Giles, 1973), both of which have been replicated in human-computer interaction contexts.
 
-**Metacognitive invisibility.** Because each exchange is locally reasonable and the shift is incremental, the loop operates below the threshold at which standard metacognitive monitoring triggers. The user does not experience drift. The user experiences accumulated familiarity.
+### Cumulative reference frame shift
 
-The adaptive loop is not an attack in the intentional sense. It does not require a malicious actor. It emerges from the structural properties of sustained interaction with a system optimised for coherence, responsiveness, and contextual relevance. Its effects are security-relevant regardless of intent.
+Over time the shared context narrows. The space of questions that feel worth asking contracts. The space of outputs that feel self-evidently correct expands. This occurs without the user internalising a discrete new belief or narrative that they could subsequently identify and evaluate. The mechanism is consistent with bounded rationality (Simon, 1955): as AI output becomes the primary source of readily available information, it defines the effective boundaries of the user's decision space.
 
----
+### Metacognitive invisibility
 
-## 3. Distinction from Existing Threat Models
-
-### 3.1 The lens model
-
-The lens model of cognitive drift holds that exposure to a narrative at a specific moment installs a cognitive frame. Subsequent evidence is interpreted through that frame. Path dependence arises because the sequence of idea-encounter determines the frame.
-
-The lens model has an identifiable installation point. Defence is possible at that point: introduce friction before the frame hardens, force contact with falsifying evidence, make the frame itself an object of scrutiny.
-
-The adaptive loop has no installation point. There is no moment at which a frame is acquired. There is a process by which a shared context is continuously co-constructed and continuously normalised. Defence at a single moment is insufficient because the mechanism is continuous.
-
-### 3.2 Automation bias
-
-Automation bias describes the tendency to over-rely on automated system outputs in specific decision contexts. It is a within-session, task-level phenomenon. CV-02 addresses it within this framework.
-
-The adaptive loop operates across sessions and across task types. It produces the conditions under which automation bias is amplified, by shifting the user's baseline expectations and calibration standards before any specific decision is made. It is the precondition, not the event.
-
-### 3.3 Social engineering and influence operations
-
-Established COGSEC traditions address external actors who deliberately construct influence campaigns. The threat is external, the intent is identifiable, and the campaign has a beginning and an end.
-
-The adaptive loop is internal to the user-system relationship. It is not constructed by an external actor. It emerges from the ordinary operation of a system the user chose to engage with, for purposes the user defined. This makes it resistant to standard social engineering defences, which are premised on the existence of an adversarial intent to identify and resist.
+Because each exchange is locally reasonable and the shift is incremental, the loop operates below the threshold at which standard metacognitive monitoring triggers. The user does not experience drift. The user experiences accumulated familiarity. This is explained mechanistically by processing fluency effects (Reber and Schwarz, 1999): increased fluency of AI output over repeated sessions is interpreted by the cognitive system as a signal of correctness and trustworthiness, suppressing System 2 evaluation (Kahneman, 2011). The Illusion of Explanatory Depth (Rozenblit and Keil, 2002) describes the closely related tendency to mistake growing familiarity with an AI's reasoning for genuine understanding and control.
 
 ---
 
-## 4. Primary Mechanisms
+## 3. Boundary Conditions
 
-### 4.1 Fluency as a continuous trust signal
+The adaptive loop is a specific form of human-AI co-adaptation. Not all adaptation is security-relevant. The loop becomes a risk-generating mechanism when the following conditions are met:
 
-Coherent, responsive, contextually calibrated output generates a processing fluency effect: the brain interprets ease of comprehension as a signal of reliability. In a static text, fluency is a one-time property. In conversational AI interaction, fluency regenerates with every exchange.
+- Shared context becomes more stable than evidential review. The user relies on the established interaction context rather than seeking external verification of AI outputs.
+- Local coherence outcompetes external verification. The internal consistency of the AI-user dialogue feels more informative than comparison against independent sources.
+- Query generation space measurably narrows over time. The user asks fewer questions that challenge the established framing, and more questions that extend it.
+- Metacognitive monitoring is suppressed by fluency. The ease of the interaction is interpreted as a signal of reliability rather than as a feature of the system's design.
 
-The cumulative effect is that trust in the system becomes dissociated from any specific verifiable claim. It is attached to the interaction pattern itself. This dissociation is the mechanism by which the fluency effect persists even when individual outputs are incorrect or poorly calibrated.
+The loop is **not** present in the following cases:
 
-### 4.2 Confirmation drift without a confirmable position
+- Repeated use of AI without co-calibration, such as using AI as a lookup tool for discrete facts with external verification.
+- Productive scaffolding with maintained independent verification norms, such as expert use with domain knowledge that enables output evaluation.
+- Short-session interaction without accumulation of shared context across sessions.
+- Interaction contexts where the user has strong external performance feedback that corrects miscalibration.
 
-Classical confirmation bias requires a prior belief that evidence is filtered through. The adaptive loop produces drift without a fixed prior. As the user's framing and the system's outputs converge over time, the space of outputs that feel correct narrows not because a belief is being confirmed but because the reference frame itself has shifted. The user is not defending a position. The user is reasoning inside a context that has been co-constructed and normalised through interaction.
-
-### 4.3 Calibration shift and generalisation
-
-Users learn, correctly, that AI systems perform reliably on certain task types. They adjust their critical engagement accordingly. This is rational local adaptation. The security-relevant consequence is that the adjustment generalises beyond the domain where it is warranted. Reduced scrutiny in one area leaks into adjacent areas where the system's reliability has not been established. The generalisation is invisible because it presents as accumulated experience rather than as a change in epistemic standards.
-
-### 4.4 Path dependence as accumulated outcome
-
-Path dependence in the context of the adaptive loop is the cumulative result of these three mechanisms operating in parallel over time. It is not caused by early narrative exposure. It is produced by the structure of the interaction itself, and it intensifies with interaction volume regardless of what content is exchanged.
+> **Note:** The distinction between beneficial scaffolding and harmful drift cannot be determined from a single session. It requires longitudinal observation of query breadth, verification behaviour, and metacognitive accuracy over time.
 
 ---
 
-## 5. Why Standard Defences Are Insufficient
+## 4. Distinction from Existing Risk Models
 
-Epistemic defences premised on the lens model (identify the frame, introduce friction at the moment of installation, force falsifying contact) address the wrong point in the causal chain. They are effective against discrete narrative adoption. They do not interrupt a continuous process that operates below metacognitive resolution.
+The adaptive loop is not adequately captured by three existing models that address related but distinct phenomena. The distinction is not that earlier models are wrong, but that they are under-scoped for persistent conversational AI interaction.
 
-Critical thinking training and media literacy education build resistance at the level of belief evaluation. The adaptive loop does not operate at that level. It operates at the level of what questions feel worth asking and what outputs feel worth evaluating critically. By the time the user applies critical thinking, the reference frame within which that thinking occurs has already been shaped by the loop.
+### Lens model (framing and narrative)
 
-Single-session interventions (warnings, friction at specific decision points, explainability features) are insufficient for the same reason. They address moments. The loop is not a moment.
+Lens model approaches describe discrete frame installation: a narrative or framing that, once internalised, structures subsequent interpretation. The adaptive loop does not require a discrete installation point. It is distributed across many interactions, none of which constitutes a decisive framing event. There is no lens the user can identify in retrospect and examine.
+
+### Automation bias (task-level reliance)
+
+Automation bias is primarily documented as a within-session, task-level phenomenon: users follow automated recommendations even when they contradict the user's own judgment on a specific decision. The loop operates across sessions and across tasks. Existing trust calibration research does address learned trust over time (Lee and See, 2004; Hoff and Bashir, 2015), and this is acknowledged. The loop's specific contribution is the conversational, context-co-constructive, metacognitively low-salience form of drift that emerges specifically in sustained language interaction, which existing automation models do not capture.
+
+### Social engineering (intentional manipulation)
+
+Social engineering requires an actor with intent to manipulate. The adaptive loop does not require actor intent. It emerges from the structural properties of repeated conversational AI interaction: the system's responsiveness, the user's natural linguistic adaptation, and the fluency effects that suppress metacognitive monitoring. This makes it harder to detect and harder to attribute.
 
 ---
 
-## 6. Defence-in-Depth Implications
+## 5. Empirical Foundation by Loop Phase
 
-Because the adaptive loop is continuous and operates across the full interaction, effective mitigation requires layered controls that are also continuous and operate at multiple points. The following control layers correspond to the mechanisms identified in section 4.
+Each phase of the adaptive loop is grounded in established empirical research. The loop as a unified security construct is a theoretical integration; the component mechanisms are individually supported.
+
+| Loop phase | Mechanism | Primary sources | Empirical status |
+|---|---|---|---|
+| Mutual adaptation | Lexical entrainment, Communication Accommodation | Brennan (1996); Giles (1973); Nass and Moon (2000) | Well-established, replicated in HCI |
+| Frame shift | Bounded rationality, Shared mental model formation | Simon (1955); Cannon-Bowers et al. (1993) | Established; note: SMM literature assumes external calibration feedback |
+| Frame shift | Bias amplification across interactions | Glickman and Sharot (2024); Vicente and Matute (2023) | Peer-reviewed; demonstrates cross-session persistence |
+| Metacognitive invisibility | Processing fluency and truth effect | Reber and Schwarz (1999) | Well-established, replicated |
+| Metacognitive invisibility | Illusion of Explanatory Depth | Rozenblit and Keil (2002) | Well-established, replicated |
+| Metacognitive invisibility | Cognitive ease and System 1 dominance | Kahneman (2011) | Foundational; widely replicated |
+| Loop as unified construct | Cross-session drift without metacognitive detection | No direct longitudinal study yet exists | Theoretical integration; empirically motivated |
+
+Two studies are particularly relevant to the loop's security implications. Glickman and Sharot (2024) demonstrated empirically that human-AI interaction amplifies human bias across interaction cycles, with participants largely unaware of the AI's influence. Vicente and Matute (2023) demonstrated that bias introduced by an AI system persisted in participants' independent decision-making even after the AI system was removed, providing the key irreversibility component. Both are peer-reviewed.
+
+On epistemic narrowing: the epistemological version of the filter bubble, where intellectual isolation arises from the interaction between the user's cognitive profile and the system's interface rather than from algorithmic filtering alone (Brändén et al., 2022), is more relevant to CV-00 than the original Pariser formulation, which lacks robust empirical support for the strong effects claimed.
+
+---
+
+## 6. Why Standard Defences Are Under-Scoped
+
+Standard epistemic defences are not wrong. They target discrete judgments more effectively than longitudinal interaction drift. The adaptive loop undermines them at a different point in the causal chain.
+
+- **Critical thinking and media literacy:** most effective at the point of evaluating a specific claim. The loop operates before claim evaluation, narrowing which claims are generated and which feel worth evaluating.
+- **Transparency and explainability:** increase the user's ability to scrutinise a single output. They do not interrupt the fluency effects that accumulate across sessions.
+- **AI warnings and uncertainty displays:** can interrupt System 2 evaluation at the point of a specific judgment. They do not prevent the gradual increase in fluency that makes System 2 interruption feel less necessary.
+
+This is not an argument that these measures are ineffective. It is an argument that they are necessary but not sufficient. They must be complemented by longitudinal controls that operate at the interaction-level rather than the judgment-level.
+
+---
+
+## 7. Defence-in-Depth Model
+
+Because the loop operates across sessions and phases, effective mitigation requires controls at multiple points. No single intervention is sufficient.
 
 ### Layer 1: Fluency interruption
 
-Structured friction introduced at regular intervals, independent of task content, interrupts the automatic trust accumulation produced by fluency. This does not require the user to distrust the system. It requires the user to periodically re-establish the grounds for trust. Specific controls addressing this layer are documented in CV-03 and CV-05.
+Introduce deliberate friction in AI-user interaction to prevent automatic processing fluency from accumulating unchecked. This includes: uncertainty markers in outputs, explicit source attribution requirements, and periodic prompting for independent verification. The goal is to keep the interaction above the threshold that triggers metacognitive monitoring.
 
-### Layer 2: Reference frame exposure
+### Layer 2: Query breadth monitoring
 
-Metacognitive checkpoints that surface the interaction pattern itself as an object of scrutiny allow the user to observe shifts in their own framing that would otherwise remain invisible. This requires explicit prompting: unaided metacognition is insufficient because the loop suppresses the signals that would normally trigger self-monitoring. CV-01 and CV-06 address specific implementations.
+Track the breadth of questions a user asks across sessions. A measurable narrowing in query diversity, relative to baseline or control, is a detectable indicator of reference frame shift. This is the most directly operationalisable metric for loop-level drift.
 
-### Layer 3: Calibration boundary maintenance
+### Layer 3: External calibration requirements
 
-Explicit domain separation prevents calibration shifts from generalising. Users benefit from maintaining documented boundaries between domains where system reliability has been verified and domains where it has not. This is an organisational control as much as an individual one. CV-04 addresses calibration drift specifically.
+In high-risk deployment contexts, require periodic verification of AI-assisted decisions against external sources or independent expert review. The Shared Mental Model literature (Cannon-Bowers et al., 1993) shows that SMMs become safety risks when they are not calibrated against external performance feedback. The same principle applies here.
 
 ### Layer 4: Longitudinal drift monitoring
 
-Because the loop operates across sessions, single-session observation is insufficient to detect it. Drift monitoring requires comparison across interaction history: logging of reasoning provenance, periodic review of framing shifts, and structured self-assessment at intervals longer than a single session. This layer has no equivalent in existing COGSEC frameworks, which are not designed for continuous interaction threats.
+Because the loop operates across sessions, single-session observation is insufficient. Drift monitoring requires comparison across interaction history: logging of reasoning provenance, periodic review of framing shifts, and structured self-assessment at intervals longer than a single session. The Loop Sensitivity Audit, proposed in section 8, operationalises this.
 
 ---
 
-## 7. Empirical Status
+## 8. Empirical Status and Proposed Measurement
 
-The mechanisms described in this document are individually supported by empirical research. Fluency effects on trust are well-established in cognitive psychology. Confirmation drift in human-AI interaction has been documented across multiple experimental paradigms. Calibration generalisation is an established finding in automation research.
+The component mechanisms of the adaptive loop are empirically supported. The loop as a unified security construct is a theoretical integration grounded in convergent evidence from cognitive psychology, HCI, and human-AI interaction research. It has not yet been validated as a single measurable risk class in a dedicated longitudinal study.
 
-The adaptive loop as a unified construct, combining these mechanisms in the specific context of sustained conversational AI interaction, is an emerging area of research. Studies using repeated-interaction paradigms rather than single-session evaluations are beginning to produce relevant findings, but the field does not yet have standardised measurement instruments for loop-level drift.
+This distinction matters for how CV-00 should be used. It provides a theoretically grounded framework for understanding risk in sustained AI interaction contexts. It should not be used as though it were a directly validated threat category.
 
-The empirical automation bias study associated with this framework (jsPsych v8, MindProbe) is designed in part to generate within-session data that can serve as a baseline for future longitudinal measurement. It does not directly measure the adaptive loop but establishes the methodological foundation for doing so.
+### Proposed measurement framework: Loop Sensitivity Audit
+
+A Loop Sensitivity Audit tests not whether the AI system is reliable, but whether the human-AI unit maintains critical distance over time. The audit has three measurement components, each corresponding to a loop phase:
+
+| Loop phase | Empirical indicator | Measurement method |
+|---|---|---|
+| Mutual adaptation | Lexical and syntactic convergence | Semantic convergence analysis: track shift from user's natural language to AI-aligned vocabulary across session logs |
+| Frame shift | Reduced exploration of alternatives | Counterfactual prompting: measure user's ability to generate alternative framings at session intervals |
+| Metacognitive invisibility | Fluency blindness | Self-report vs objective drift gap: compare user's estimated objectivity against actual error detection rate for planted AI outputs |
+
+The automation bias study associated with this framework (jsPsych v8, MindProbe) generates within-session baseline data relevant to the metacognitive invisibility phase. It does not directly measure the loop but establishes a methodological foundation for the Audit's third component.
 
 ---
 
-## 8. Relationship to CV-01 through CV-07
+## 9. Relationship to CV-01 through CV-07
 
 Each document in the CV series addresses a specific cognitive vulnerability: a state or tendency that the adaptive loop produces or amplifies. CV-00 is the explanatory foundation for why those vulnerabilities arise in AI-interaction contexts specifically, as distinct from the broader cognitive science literature from which they are drawn.
 
-CV documents should be read as describing effects. CV-00 describes the generating mechanism. Mitigations documented in individual CV entries are most effective when implemented as part of the layered defence-in-depth model described in section 6 of this document, rather than as standalone interventions targeting individual vulnerabilities.
+CV documents should be read as describing effects. CV-00 describes the risk-generating mechanism. Mitigations documented in individual CV entries are most effective when implemented as part of the layered defence-in-depth model described in section 7 of this document, rather than as standalone interventions targeting individual vulnerabilities.
+
+---
+
+## References
+
+Brennan, S.E. (1996). Lexical entrainment in spontaneous dialog. Proceedings of the 1996 International Symposium on Spoken Dialogue, 41-44.
+
+Branden, A. et al. (2022). Through the Newsfeed Glass: Rethinking Filter Bubbles and Echo Chambers. Frontiers in Psychology. PMC8923337.
+
+Cannon-Bowers, J.A., Salas, E. and Converse, S. (1993). Shared mental models in expert team decision making. In N.J. Castellan (Ed.), Individual and Group Decision Making. Erlbaum.
+
+Giles, H. (1973). Accent mobility: A model and some data. Anthropological Linguistics, 15(2), 87-105.
+
+Glickman, M. and Sharot, T. (2024). How human-AI feedback loops alter human perceptual, emotional and social judgements. Nature Human Behaviour, 9, 345-359. https://doi.org/10.1038/s41562-024-02077-2
+
+Hoff, K.A. and Bashir, M. (2015). Trust in automation: Integrating empirical evidence on factors that influence trust. Human Factors, 57(3), 407-434.
+
+Kahneman, D. (2011). Thinking, Fast and Slow. Farrar, Straus and Giroux.
+
+Lee, J.D. and See, K.A. (2004). Trust in automation: Designing for appropriate reliance. Human Factors, 46(1), 50-80.
+
+Nass, C. and Moon, Y. (2000). Machines and mindlessness: Social responses to computers. Journal of Social Issues, 56(1), 81-103.
+
+Reber, R. and Schwarz, N. (1999). Effects of perceptual fluency on judgments of truth. Consciousness and Cognition, 8(3), 338-342.
+
+Rozenblit, L. and Keil, F. (2002). The misunderstood limits of folk science: An illusion of explanatory depth. Cognitive Science, 26(5), 521-562.
+
+Simon, H.A. (1955). A behavioral model of rational choice. The Quarterly Journal of Economics, 69(1), 99-118.
+
+Vicente, L. and Matute, H. (2023). Humans inherit artificial intelligence biases. Scientific Reports, 13, 15737. https://doi.org/10.1038/s41598-023-42384-8
 
 ---
 
 *King Che Magnusson*
-*OWASP HCI Cognitive Layer, CV-00 v1.0*
+*OWASP HCI Cognitive Layer, CV-00 v2.0*
