@@ -4,7 +4,7 @@
 
 AI systems do not only fail technically. They fail at the boundary between the system and the human who is supposed to oversee it. A radiologist approves a diagnosis she does not understand. An officer acts on a risk score he cannot challenge. An analyst misses an anomaly because the system did not flag it. None of these are software bugs. The systems worked as designed. The failures happened in the interaction layer, and that layer is not covered by existing security frameworks.
 
-OWASP HCI Cognitive Layer defines that layer.
+HCI Cognitive Layer defines that layer.
 
 ---
 
