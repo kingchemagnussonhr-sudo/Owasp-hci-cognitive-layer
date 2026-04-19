@@ -1,4 +1,4 @@
-# 00: Overview: OWASP HCI Cognitive Layer
+# 00: Overview:  HCI Cognitive Layer
 
 ---
 
