@@ -1,4 +1,4 @@
-OWASP HCI Cognitive Layer
+OWASP inpired HCI Cognitive Layer 
 
 **A research framework for the cognitive attack surface in AI-assisted decision-making.**
 
